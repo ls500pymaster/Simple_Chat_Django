@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "accounts.Customuser"
+
 
 # Application definition
 
@@ -41,6 +43,7 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
+    "accounts",
 ]
 
 THIRD_PARTY = [
@@ -66,8 +69,7 @@ ROOT_URLCONF = 'Simple_Chat_Django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-	    ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
